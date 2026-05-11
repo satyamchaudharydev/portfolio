@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "Editorial New";
+  src: url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/5f242a694256f02b944d5767_EditorialNew-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Editorial New";
+  src: url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/61099e9d29b5b66c3799db9a_EditorialNew-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Canopee";
+  src: url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/616fd1dd00cf6c70f978fc69_Canopee.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Domaine Disp Cond Medium";
+  src: url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/5f242a69b1577e63266b4d72_DomaineDispCondMedium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("./assets/fonts/PPEditorialNew-Ultralight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("./assets/fonts/PPEditorialNew-UltralightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("./assets/fonts/PPEditorialNew-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("./assets/fonts/PPEditorialNew-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("./assets/fonts/PPEditorialNew-Ultrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("./assets/fonts/PPEditorialNew-UltraboldItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper-bg: #DFD5CA;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper-bg);
+  background-image:
+    url("./assets/textures/watercolor-paper-texture.jpg");
+  background-blend-mode: multiply;
+  background-repeat: repeat;
+  background-size: 1200px auto;
+  background-position: top left;
+  color: #17130f;
+}
+
+.vintage-paper {
+  position: relative;
+  background-color: var(--paper-bg);
+  background-image: url("./assets/textures/watercolor-paper-texture.jpg");
+  background-blend-mode: multiply;
+  background-repeat: repeat;
+  background-size: 1200px auto;
+  background-position: top left;
+  scroll-behavior: smooth;
+}
+
+.vintage-paper-panel {
+  position: relative;
+  isolation: isolate;
+}
+
+.ink-poster {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 0 1px rgba(236, 228, 210, 0.12),
+    inset 0 0 130px rgba(0, 0, 0, 0.58),
+    inset 0 0 28px rgba(255, 250, 236, 0.04);
+}
+
+
+
+.ink-poster-frame {
+  box-shadow:
+    inset 0 0 0 1px rgba(236, 228, 210, 0.17),
+    inset 0 0 72px rgba(0, 0, 0, 0.34),
+    inset 0 0 18px rgba(255, 250, 236, 0.05);
+}
+
+
+
+.dropcap::first-letter {
+  float: left;
+  font-family: "Playfair Display", serif;
+  font-size: 5rem;
+  line-height: 0.82;
+  font-weight: 900;
+  border-radius: 1px;
+  padding: 0.12rem 0.32rem 0.62rem 0.28rem;
+  margin-right: 0.6rem;
+  color: #e7dcc5;
+  background-color: #17130f;
+}
+
+.portrait-placeholder {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(171, 149, 111, 0.25),
+    rgba(171, 149, 111, 0.25) 7px,
+    rgba(231, 220, 197, 0.35) 7px,
+    rgba(231, 220, 197, 0.35) 20px
+  );
+}
+
+.headline-red {
+  color: #c0172d;
+  font-style: italic;
+}
+.drop-cap-2::first-letter {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif !important;
+  line-height: 0.82;
+  font-weight: 900;
+  border-radius: 1px;
+  padding: 0.12rem 0.32rem 0.62rem 0.28rem;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.marquee-track,
+.footer-marquee-track {
+  animation: marqueeScroll 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

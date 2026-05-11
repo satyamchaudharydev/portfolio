@@ -1,0 +1,116 @@
+Satyam Chaudhary [ Full Stack Engineer ]
+
+9 Bangalore, India
+
+Frontend-focused full-stack engineer with 3+ years shipping production apps across web and mobile at early-stage startups.
+Comfortable owning products end-to-end, from O > 1. Active open-source contributor and top creator on Ulverse with 7OOK+
+
+views.
+® Portfolio ©) satyamchaudharydev (f) satyam-chaudhary \X{ satyamdev satyamchaudharydev@gmail.com  . +91-7701826187
+Open Source / Projects
+
+* Top Creator on Uiverse : Published 36+ Ul components achieving 700,000+ views and 50,000+ favorites. View portfolio
+
++ Freecodecamp Curriculum: Invited by founder Quincy Larson to contribute a new educational module to the platform. View Contribution
+* HTML Linter Library: Developed and maintain an open-source library for seamless linter integration in web-based code editors. Try Library
+* Duck-State Library: Active contributor specializing in server state management and data synchronization. Try Library
+
+@ View more projects
+
+Experience
+
+Founding Engineer,
+Full Stack
+
+July 2025 - Nov 2026
+
+ZuAl
+
+Frontend Engineer
+Oct 2024 - Jul 2025
+
+View Website >
+
+© srightcHames
+
+WINDOW TO NEXTOEN SHILLS
+
+Frontend Developer
+Nov 2023 - Aug 2024
+
+View Website >
+
+Tekie
+
+Frontend Engineer
+June 2022 - Nov 2023
+
+THe TOMES cw INA,
+
+View Website >
+
+Glitch.house, an Al-powered discovery platform for DIY hardware enthusiasts with structured build guides, component
+lists, and personalised recommendations.
+
++ Built a pnpm monorepo with Next.js and Expo, sharing most components across web and mobile via
+NativeWind. Hired and led a team of 3 remote interns to ship 3 platforms rapidly from one codebase.
+
++ Built the API layer with Postgres, Drizzle, and tRPC: 15+ procedures for search, filtering, and infinite scroll
+across IOOK+ projects, consumed by both web and mobile from shared types.
+
++ Implemented Redis-backed caching for per-user recommendations, collaborating on the backend logic to
+serve personalised build guides across the app.
+
+« Owned cross-platform authentication end-to-end, integrating Better Auth with custom native flows to make
+OAuth work consistently across web, iOS, and Android.
+
+ZuAl is a Bengaluru-based EdTech startup offering an Al-powered learning platform with 24/7 personalized tutoring. Backed
+by Google for Startups, the company has raised $1.72M in funding and surpassed I million iOS downloads.
+
+Led the web migration of ZuAl's Al tutoring product in Next.js, porting the full mobile experience (chat, study
+guides, notes, quizzes, and mock exams) into a cohesive web app.
+
+Built a multi-modal Al chat interface with a custom block syntax on top of react-markdown, rendering
+streamed Al responses into inline widgets (quizzes, math simulators, diagrams, images, and video suggestions).
+
++ Architected state and real-time streaming with Zustand and SSE, handling updates from the Al backend on a
+widget-heavy UI.
+
+Contributed to a cross-platform education app with Flutter & React Native, helping achieve IM+ downloads and
+top 30 ranking in education.
+
+BrightChamps teaches coding, robotics, and life skills to kids aged 6-16 through live online classes. Valued at
+$650M, it operates in 30+ countries.
+« Led a three-engineer team building Project X, the interactive learning layer on BrightChamps' web-native
+classroom platform, shipping interactive slides, character-driven lessons and puzzles in Next.js.
+« Designed a component library for building games, with Framer Motion and GSAP baked in, shipping 50+
+interactive games used in live BrightChamps classes.
+« Built lesson-structuring, course curation, and live-class flows in the BrightChamps teacher app (React
+Native/Expo), used by 1K+ teachers on the platform.
+
+Tekie teaches coding through storytelling in schools. After raising $1.5M, it was acquired by Uolo ($25.5M raised) and now
+drives 80% of their revenue, serving SOOK+ students across 1000+ schools in India.
+
+Built multiple coding tools: an offline Python editor powered by WASM, an HTML/CSS/JS playground, a
+drag-and-drop Blockly playground and a mobile-based editor with IntelliSense-style autocompletion.
+
+Built Python Flask application with ETL pipeline, delivering critical internal reports on student progress and
+engagement to stakeholders.
+
+Overhauled frontend for offline-first persistence and proactive query prefetching, reducing P95 load time
+from 10s to under 1s.
+
+Spearheaded migration from Webpack to Vite with TypeScript, ESLint, and Prettier—slashing build time by
+94% (8min > 30s) and start time by 90% (Imin > 5s) through treeshaking, lazy loading, and code-splitting.
+
+Education & Awards
+
+Diploma in Computer Science
+Ambedkar Institute of Technology, Delhi
+
+Technical Skills
+
+TypeScript, React, Next.js, React Native, Electron, Node.js, RPC, GraphQL, Redux,
+Zustand, HTML/CSS, Python
+
+2019-22
