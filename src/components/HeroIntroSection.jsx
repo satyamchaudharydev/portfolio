@@ -47,19 +47,19 @@ export default function HeroIntroSection({ heroPortrait }) {
 
       <div className="mt-4 grid gap-0 border-t-[1px] border-inkSoft px-4 sm:px-8 lg:grid-cols-[1fr_1.35fr]">
         <article className="px-0 pb-6 pt-6 lg:border-r-[1px] lg:border-inkSoft lg:pr-8">
-          <div className="relative flex flex-col items-start gap-3 pt-3 sm:flex-row sm:items-center">
-            <h2 className="pr-24 font-display uppercase leading-[0.84] tracking-[-0.02em] text-ink sm:pr-0 sm:text-[clamp(2.7rem,12vw,7.75rem)] sm:leading-[0.88]">
-              <span className="ml-1 block text-[2.75rem] font-[700] tracking-[-0.01em] sm:text-[clamp(1.8rem,7vw,6.25rem)]">
+          <div className="relative flex flex-col items-start gap-3 pt-3 lg:flex-row lg:items-center">
+            <h2 className="pr-[6.4rem] font-display uppercase leading-[0.84] tracking-[-0.02em] text-ink sm:pr-[7.8rem] lg:pr-0 lg:text-[clamp(2.7rem,12vw,7.75rem)] lg:leading-[0.88]">
+              <span className="ml-1 block text-[3.35rem] font-[700] tracking-[-0.01em] sm:text-[clamp(3.9rem,8.6vw,5.65rem)] lg:text-[clamp(1.8rem,7vw,6.25rem)]">
                 I <span className="font-domaine">co</span>de <span className="font-headline">&amp;</span>
               </span>
-              <span className="block text-[4rem] font-[800] tracking-[0.02em] sm:text-[clamp(2.3rem,9vw,7.5rem)]">
+              <span className="block text-[5rem] font-[800] tracking-[0.02em] sm:text-[clamp(5.7rem,12vw,7.2rem)] lg:text-[clamp(2.3rem,9vw,7.5rem)]">
                 <span className="font-domaine">cr</span>eate
               </span>
-              <span className="ml-1 block text-[3.25rem] font-[600] tracking-[0.02em] sm:text-[clamp(2rem,8vw,7.5rem)]">
+              <span className="ml-1 block text-[4rem] font-[600] tracking-[0.02em] sm:text-[clamp(4.7rem,10vw,6.7rem)] lg:text-[clamp(2rem,8vw,7.5rem)]">
                 Stuff
               </span>
             </h2>
-            <ArchiveStamp className="relative top-24 h-[5.3rem] w-[5.3rem] shrink-0 rotate-[8deg] opacity-80 sm:h-[6.2rem] sm:w-[6.2rem] sm:self-start" />
+            <ArchiveStamp className="absolute right-0 top-5 h-[4.9rem] w-[4.9rem] shrink-0 rotate-[8deg] opacity-80 sm:top-7 sm:h-[6.1rem] sm:w-[6.1rem] lg:relative lg:top-24 lg:h-[6.2rem] lg:w-[6.2rem] lg:self-start" />
           </div>
           <div className="mt-3 border-b border-ink/30" />
 
@@ -129,7 +129,7 @@ export default function HeroIntroSection({ heroPortrait }) {
         </article>
 
         <aside className="px-0 pb-6 pt-6 lg:pl-8">
-          <figure className="h-[340px] overflow-hidden border-[1px] border-ink sm:h-[460px] md:h-[620px] lg:h-[720px] xl:h-[700px]">
+          <figure className="h-[300px] overflow-hidden border-[1px] border-ink sm:h-[390px] md:h-[500px] lg:h-[720px] xl:h-[700px]">
             <img
               src={heroPortrait}
               alt="Split portrait and design tools illustration of Satyam Chaudhary"

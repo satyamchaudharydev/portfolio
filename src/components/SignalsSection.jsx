@@ -406,8 +406,8 @@ function ProjectActionChip({ label, href }) {
 export default function SignalsSection() {
   return (
     <section id="signals" className="relative overflow-hidden  px-4 pb-5 pt-6 text-[#1d1712] sm:px-5">
-      <div className="grid min-h-[8rem] place-items-center bg-[#131313] px-[0.95rem] py-[0.68rem] shadow-[inset_0_0_0_1px_rgba(247,240,227,0.08),inset_0_0_138px_rgba(0,0,0,0.76)] lg:min-h-[12rem] lg:px-[1.28rem] lg:py-[0.92rem]">
-          <span className="m-0 font-display text-[clamp(4.2rem,18.4vw,12.7rem)] leading-[0.715] tracking-[-0.02em] uppercase text-[#e7dfce]">
+      <div className="grid min-h-[7rem] place-items-center bg-[#131313] px-[0.95rem] py-[0.68rem] shadow-[inset_0_0_0_1px_rgba(247,240,227,0.08),inset_0_0_138px_rgba(0,0,0,0.76)] md:max-lg:min-h-[9rem] lg:min-h-[12rem] lg:px-[1.28rem] lg:py-[0.92rem]">
+          <span className="m-0 font-display text-[clamp(3.25rem,14.2vw,12.7rem)] leading-[0.715] tracking-[-0.02em] uppercase text-[#e7dfce] md:max-lg:text-[clamp(3.5rem,10.8vw,7.25rem)]">
             Pr<span className="font-domaine">o</span>je<span className="c"></span>ts & Rea<span className="font-domaine">c</span>ti<span className="font-domaine">o</span>ns
           </span>
       </div>

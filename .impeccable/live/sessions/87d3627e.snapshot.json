@@ -1,0 +1,25 @@
+{
+  "id": "87d3627e",
+  "phase": "discarded",
+  "pageUrl": "/",
+  "sourceFile": "src/components/SignalsSection.jsx",
+  "expectedVariants": 3,
+  "arrivedVariants": 3,
+  "visibleVariant": 3,
+  "paramValues": {
+    "margin": 0.45,
+    "paper": 0.5,
+    "scale": 0.5,
+    "order": "story-first"
+  },
+  "pendingEventSeq": null,
+  "pendingEvent": null,
+  "deliveryLease": null,
+  "checkpointRevision": 5,
+  "activeOwner": "c3b2bf18",
+  "sourceMarkers": {},
+  "fallbackMode": null,
+  "annotationArtifacts": [],
+  "diagnostics": [],
+  "updatedAt": "2026-05-20T03:35:38.910Z"
+}

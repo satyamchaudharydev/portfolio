@@ -1,0 +1,25 @@
+{
+  "id": "34f4dec9",
+  "phase": "agent_error",
+  "pageUrl": "/",
+  "sourceFile": null,
+  "expectedVariants": 3,
+  "arrivedVariants": 0,
+  "visibleVariant": 0,
+  "paramValues": {},
+  "pendingEventSeq": null,
+  "pendingEvent": null,
+  "deliveryLease": null,
+  "checkpointRevision": 1,
+  "activeOwner": "f7b79073",
+  "sourceMarkers": {},
+  "fallbackMode": null,
+  "annotationArtifacts": [],
+  "diagnostics": [
+    {
+      "error": "agent_error",
+      "message": "Reverted the previous change"
+    }
+  ],
+  "updatedAt": "2026-05-20T03:57:45.624Z"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "854d93dd",
+  "phase": "completed",
+  "pageUrl": "/",
+  "sourceFile": "src/components/HeroIntroSection.jsx",
+  "expectedVariants": 3,
+  "arrivedVariants": 0,
+  "visibleVariant": 2,
+  "paramValues": {
+    "size": 0.9,
+    "density": 0.7,
+    "stamp-size": 0.95
+  },
+  "pendingEventSeq": null,
+  "pendingEvent": null,
+  "deliveryLease": null,
+  "checkpointRevision": 33,
+  "activeOwner": "30b42c5b",
+  "sourceMarkers": {},
+  "fallbackMode": null,
+  "annotationArtifacts": [],
+  "diagnostics": [
+    {
+      "error": "stale_checkpoint_ignored",
+      "revision": 1
+    },
+    {
+      "error": "stale_checkpoint_ignored",
+      "revision": 2
+    },
+    {
+      "error": "stale_checkpoint_ignored",
+      "revision": 3
+    },
+    {
+      "error": "stale_checkpoint_ignored",
+      "revision": 4
+    },
+    {
+      "error": "stale_checkpoint_ignored",
+      "revision": 5
+    },
+    {
+      "error": "stale_checkpoint_ignored",
+      "revision": 6
+    },
+    {
+      "error": "stale_checkpoint_ignored",
+      "revision": 7
+    },
+    {
+      "error": "stale_checkpoint_ignored",
+      "revision": 8
+    },
+    {
+      "error": "stale_checkpoint_ignored",
+      "revision": 9
+    },
+    {
+      "error": "carbonize_cleanup_required",
+      "file": "src/components/HeroIntroSection.jsx",
+      "message": "Accepted variant still has carbonize markers that must be folded into source CSS."
+    }
+  ],
+  "updatedAt": "2026-05-20T04:14:24.500Z"
+}

@@ -1,0 +1,38 @@
+
+> satyam-gazette-portfolio@0.0.0 dev /Users/sanatan/Documents/satyam/portfolio
+> vite -- --host 127.0.0.1
+
+
+  VITE v5.4.21  ready in 70 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+9:23:01 am [vite] hmr update /src/components/SignalsSection.jsx, /src/index.css
+9:23:55 am [vite] hmr update /src/components/SignalsSection.jsx, /src/index.css
+9:25:44 am [vite] hmr update /src/components/SignalsSection.jsx, /src/index.css
+9:26:16 am [vite] hmr update /src/index.css
+9:26:49 am [vite] hmr update /src/components/SignalsSection.jsx, /src/index.css
+9:27:25 am [vite] hmr update /src/components/SignalsSection.jsx, /src/index.css
+9:27:38 am [vite] hmr update /src/index.css
+9:34:41 am [vite] page reload index.html
+9:35:01 am [vite] page reload index.html
+9:35:49 am [vite] page reload index.html
+9:37:07 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+9:38:26 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+9:39:41 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+9:40:55 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+9:41:10 am [vite] hmr update /src/index.css
+9:41:33 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+9:42:39 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+9:43:00 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+9:43:33 am [vite] hmr update /src/index.css
+9:44:17 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+9:45:10 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+9:45:32 am [vite] hmr update /src/index.css
+9:55:45 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+9:59:47 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+9:59:54 am [vite] hmr update /src/components/SignalsSection.jsx, /src/index.css
+10:00:04 am [vite] hmr update /src/index.css
+10:05:04 am [vite] hmr update /src/components/HeroIntroSection.jsx, /src/index.css
+10:05:25 am [vite] hmr update /src/components/WorkHighlightsSection.jsx, /src/index.css
+10:05:33 am [vite] hmr update /src/components/SignalsSection.jsx, /src/index.css
