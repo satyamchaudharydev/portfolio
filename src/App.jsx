@@ -1,46 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion, useAnimate, useReducedMotion } from "framer-motion";
 import heroPortrait from "./assets/hero-portrait.png";
-import workStatIcon from "./assets/stats/work.png";
-import codepenStatIcon from "./assets/stats/codepen.png";
-import eyeStatIcon from "./assets/stats/eye.png";
-import loveStatIcon from "./assets/stats/love.png";
 import HeroIntroSection from "./components/HeroIntroSection";
 import MinimalFooter from "./components/MinimalFooter";
 import SignalsSection from "./components/SignalsSection";
 import WorkHighlightsSection from "./components/WorkHighlightsSection";
-
-const bottomHighlights = [
-  {
-    title: "WORK EXPERIENCE",
-    value: "3+",
-    subtitle: "YEARS",
-    valueFirst: true,
-    href: "https://chatgpt.com/s/m_69e95ea6776081919e360ee37eb4b706",
-    icon: workStatIcon
-  },
-  {
-    title: "CODEPEN",
-    value: "8",
-    subtitle: "Picked Pens",
-    href: "https://chatgpt.com/s/m_69e95f2813308191b11d4e18780e1a94",
-    icon: codepenStatIcon
-  },
-  {
-    title: "UIVERSE",
-    value: "700K",
-    subtitle: "TOTAL VIEWS",
-    href: "https://chatgpt.com/s/m_69e95f3a58dc8191bb8bcd637a6460e8",
-    icon: eyeStatIcon
-  },
-  {
-    title: "UIVERSE",
-    value: "200K",
-    subtitle: "FAVOURITES",
-    href: "https://chatgpt.com/s/m_69e95f5e952881919f25872aaf628bd6",
-    icon: loveStatIcon
-  }
-];
 
 export default function App() {
   const [introActive, setIntroActive] = useState(true);
@@ -79,20 +43,12 @@ export default function App() {
     }
 
     (async () => {
-      // Phase 1 — paper rises ~80% of screen height with a soft
-      // spring, ending in the lower-center area (still below
-      // viewport center, NOT centered). Settles before rotation.
       await animateCard(
         cardScope.current,
         { y: ["-20vh", "-100vh"] },
         { duration: 0.8, ease: [1, 0.4, 0.2, 0.8] }
       );
-      // Tiny breath so the card visibly settles before the spin.
-      await new Promise((r) => setTimeout(r, 220));
-      // Phase 2 — spin 360° + grow to fill screen + reset y to 0.
-      // Overlay fades in parallel, weighted late so the dark
-      // backdrop is solid through most of the spin.
-    
+      await new Promise((resolve) => setTimeout(resolve, 220));
       const phaseTwoTransition = {
         duration: 0.8,
         ease: [1, 0.4, 0.6, 0.8]
@@ -105,8 +61,7 @@ export default function App() {
       animateSpin(spinScope.current, { rotate: 0 }, { duration: 0 });
       setIntroActive(false);
     })();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [animateCard, animateSpin, cardScope, shouldReduceMotion, spinScope]);
 
   return (
     <>
@@ -146,9 +101,6 @@ export default function App() {
             <HeroIntroSection heroPortrait={heroPortrait} />
             <WorkHighlightsSection />
             <SignalsSection />
-
-      
-
             <MinimalFooter />
           </motion.div>
         </motion.main>

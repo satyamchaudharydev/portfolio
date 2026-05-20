@@ -6,7 +6,7 @@ import texture1 from "../assets/textures/ink-texture-1.png";
 import texture2 from "../assets/textures/ink-texture-2.png";
 import texture3 from "../assets/textures/ink-texture-3.png";
 import WorkProjectCard from "./WorkProjectCard";
-import Seperator from "./seperator";
+import Separator from "./Separator";
 
 const workCards = [
   {
@@ -87,7 +87,7 @@ export default function WorkHighlightsSection() {
           shipping interfaces, systems, and product foundations with a focus on clarity and craft.
         </p>
       </div>
-      <Seperator variant="normal" />
+      <Separator variant="normal" />
 
       <div className="grid items-start gap-[0.9rem] pt-8 min-[720px]:max-lg:grid-cols-1 lg:grid-cols-[minmax(0,0.40fr)_minmax(0,0.60fr)] lg:gap-[1rem]">
         <aside className="flex min-w-0 flex-col">
@@ -112,8 +112,6 @@ export default function WorkHighlightsSection() {
         <div className="min-w-0">
           <WorkProjectCard
             featured
-            label="FEATURED PROJECT"
-            category={featuredCard.category}
             title={featuredCard.title}
             roleLine={featuredCard.roleLine}
             years={featuredCard.years}
@@ -131,8 +129,6 @@ export default function WorkHighlightsSection() {
         {projectCards.map((card) => (
           <WorkProjectCard
             key={card.title}
-            label="PROJECT"
-            category={card.category}
             title={card.title}
             roleLine={card.roleLine}
             years={card.years}

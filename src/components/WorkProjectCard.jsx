@@ -1,6 +1,4 @@
 export default function WorkProjectCard({
-  label = "PROJECT",
-  category,
   featured = false,
   title,
   roleLine,
@@ -33,16 +31,6 @@ export default function WorkProjectCard({
 
   return (
     <article className={articleClass}>
-      {/* <header className="relative z-[1] grid grid-cols-[minmax(0,1fr)_auto] items-center gap-[0.4rem] border-b border-[rgba(42,33,23,0.5)] px-[0.28rem] pb-[0.43rem] pt-[0.18rem] font-display text-[clamp(0.92rem,0.72vw,1.16rem)] uppercase leading-none tracking-[0.07em] text-[#241d16]">
-        <span className="inline-flex items-center gap-[0.44rem]">
-          <span aria-hidden="true" className="text-[0.9em]">
-            ✦
-          </span>
-          <span>{label}</span>
-        </span>
-        {category ? <span className="text-right">{category}</span> : null}
-      </header> */}
-
       <div className={mediaClass} style={mediaStyle}>
         {mediaTiles.length ? (
           <div className="absolute inset-0 grid grid-cols-3 grid-rows-2 gap-[2px] bg-[rgba(14,15,18,0.94)]" aria-hidden="true">

@@ -1,4 +1,3 @@
-import Seperator from "./seperator";
 import ArchiveStamp from "./ArchiveStamp";
 import { RibbonEndIcon } from "./icons";
 
