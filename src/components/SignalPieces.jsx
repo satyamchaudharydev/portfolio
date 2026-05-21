@@ -135,18 +135,20 @@ function QuincyPortraitMedallion() {
 export function QuincyRecognitionStory() {
   return (
     <div className="mt-4 border-t border-[#2c2217]/45 pt-2">
-        <div className="w-[100%]">
+        <div className="w-full">
           <HanddrawnLabel text="Recognized by" />
-          <div className="flex"> 
-            <div className="mt-2">
-              <p className="font-domaine text-[clamp(1.8rem,2.7vw,3.05rem)] uppercase leading-[0.88] tracking-[-0.03em] text-[#16100c]">
+          <div className="mt-2 flex items-start justify-between gap-3 md:flex-col md:items-start lg:flex-row lg:items-start xl:flex-row">
+            <div className="min-w-0">
+              <p className="font-domaine text-[clamp(1.6rem,7vw,3.05rem)] uppercase leading-[0.9] tracking-[-0.03em] text-[#16100c] md:text-[clamp(1.85rem,3vw,2.6rem)] xl:text-[clamp(1.8rem,2.7vw,3.05rem)]">
                 Quincy Larson
               </p>
-              <p className="mt-[1px] font-domaine text-[clamp(0.8rem,1.22vw,1.35rem)] italic leading-[0.98] text-[#1d1510]">
+              <p className="mt-[1px] font-domaine text-[clamp(0.84rem,3.5vw,1.35rem)] italic leading-[0.98] text-[#1d1510] md:text-[clamp(0.82rem,1.35vw,1.05rem)] xl:text-[clamp(0.8rem,1.22vw,1.35rem)]">
                 (Founder, freeCodeCamp)
               </p>
             </div>
-            <QuincyPortraitMedallion />
+            <div className="shrink-0 md:self-start lg:self-auto">
+              <QuincyPortraitMedallion />
+            </div>
           </div>
           <div className="relative justify-self-start md:justify-self-center">
         </div>
@@ -155,7 +157,7 @@ export function QuincyRecognitionStory() {
        
 
       <div className="mt-6 max-w-[42rem]">
-        <p className="flex flex-wrap items-center gap-x-3 gap-y-2 font-body text-[clamp(0.96rem,1.2vw,1.16rem)] leading-[1.15] text-[#1c150f]">
+        <p className="flex flex-wrap items-center gap-x-3 gap-y-2 font-body text-[clamp(0.96rem,3.5vw,1.16rem)] leading-[1.15] text-[#1c150f] md:text-[clamp(0.94rem,1.3vw,1.06rem)] xl:text-[clamp(0.96rem,1.2vw,1.16rem)]">
           <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#17110c] text-[#f5ecdd]">
             <TweetIcon className="h-3.5 w-3.5" />
           </span>
@@ -194,7 +196,7 @@ export function QuincyRecognitionStory() {
           </div>
         </SketchTweetCard>
 
-        <div className="mt-4 max-w-[33rem] font-body text-[clamp(1.2rem,1.04vw,1rem)] leading-[1.18] text-[#201710]">
+        <div className="mt-4 max-w-[33rem] font-body text-[clamp(1rem,3.8vw,1.08rem)] leading-[1.18] text-[#201710] md:text-[clamp(0.96rem,1.1vw,1rem)] xl:text-[clamp(1.2rem,1.04vw,1rem)]">
           <span>That reply led to a </span>
           <span className="relative inline-flex items-center justify-center px-3 py-0.5 font-domaine text-[1.05em] uppercase leading-none text-[#1a120d]">
             DM
