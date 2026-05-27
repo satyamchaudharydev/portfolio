@@ -75,14 +75,16 @@ export default function WorkHighlightsSection() {
   const projectCards = workCards.slice(1);
 
   return (
-    <section className="relative isolate mt-4 overflow-hidden bg-transparent p-4 text-[#1f1913] sm:p-5 md:max-lg:p-3">
-      <div className="mb-[0.95rem] flex flex-col items-start gap-[0.9rem] md:flex-row md:items-stretch">
-        <div className="grid min-h-[7.5rem] w-full place-items-center bg-[#131313] px-[0.95rem] py-[0.68rem] shadow-[inset_0_0_0_1px_rgba(247,240,227,0.08),inset_0_0_138px_rgba(0,0,0,0.76)] md:w-auto md:max-lg:min-h-[10.5rem] md:max-lg:px-[0.72rem] md:max-lg:py-[0.52rem] lg:min-h-[19.8rem] lg:px-[1.28rem] lg:py-[0.92rem]">
-          <span className="m-0 font-display text-[clamp(5.1rem,15.5vw,16rem)] leading-[0.715] tracking-[-0.02em] uppercase text-[#e7dfce] md:max-lg:text-[clamp(4.1rem,11.6vw,7.7rem)]">
+    <section className="relative isolate overflow-hidden bg-transparent p-4 text-[#1f1913] sm:p-5 md:max-lg:p-3">
+      <div className="mb-[0.95rem] flex flex-col items-start gap-[1.5vw] md:flex-row md:items-stretch">
+ 
+        <div className="grid w-full place-items-center bg-[#131313] px-[0.95rem] shadow-[inset_0_0_0_1px_rgba(247,240,227,0.08),inset_0_0_138px_rgba(0,0,0,0.76)] md:w-auto md:max-lg:px-[0.72rem] lg:px-[1.28rem] ">
+          <span className="m-0 font-display text-[16vw] leading-[0.2] pb-[0px] pt-[22px] tracking-[-0.02em] uppercase text-[#e7dfce] md:max-lg:text-[clamp(4.1rem,11.6vw,7.7rem)]">
+     
             Experien<span className="font-domaine">c</span>e
           </span>
         </div>
-        <p className="m-0 max-w-[28ch] font-body text-[clamp(1.12rem,4.2vw,2.25rem)] leading-[1.08] tracking-[-0.008em] text-[#1a1814] md:max-lg:text-[clamp(1.05rem,2.65vw,1.55rem)] lg:self-start lg:pt-[0.74rem] max-md:max-w-none">
+        <p className="m-0 max-w-[28ch] font-body text-[2vw] leading-[1.08] tracking-[-0.008em] text-[#1a1814]  lg:self-start lg:pt-[0.74rem] max-md:max-w-none">
           Over the past 5+ years, I've worked across product, AI tutoring, hardware discovery, and coding education -
           shipping interfaces, systems, and product foundations with a focus on clarity and craft.
         </p>

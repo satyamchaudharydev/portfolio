@@ -88,6 +88,8 @@
 
 :root {
   --paper-bg: #DFD5CA;
+  --fs-headline: clamp(3.2rem, 7vw, 40rem);
+  --fs-hero-line: clamp(1.8rem, 7vw, 50rem);
 }
 
 html,
@@ -147,7 +149,15 @@ body {
     inset 0 0 18px rgba(255, 250, 236, 0.05);
 }
 
+@layer utilities {
+  .text-headline {
+    font-size: var(--fs-headline);
+  }
 
+  .text-hero-line {
+    font-size: var(--fs-hero-line);
+  }
+}
 
 .dropcap::first-letter {
   float: left;
