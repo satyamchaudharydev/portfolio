@@ -5,6 +5,7 @@ import HeroIntroSection from "./components/HeroIntroSection";
 import MinimalFooter from "./components/MinimalFooter";
 import SignalsSection from "./components/SignalsSection";
 import WorkHighlightsSection from "./components/WorkHighlightsSection";
+import Separator from "./components/Separator";
 
 export default function App() {
   const [introActive, setIntroActive] = useState(true);
@@ -100,6 +101,7 @@ export default function App() {
           >
             <HeroIntroSection heroPortrait={heroPortrait} />
             <WorkHighlightsSection />
+            <Separator variant="normal" className="mt-6 mb-4" />
             <SignalsSection />
             <MinimalFooter />
           </motion.div>

@@ -1,5 +1,6 @@
 import Separator from "./Separator";
-import { PongPreview, ProjectActionChip, QuincyRecognitionStory, Quote } from "./SignalPieces";
+import { PongPreview, QuincyRecognitionStory, Quote } from "./SignalPieces";
+import ProjectActionChip from "./ProjectActionChip";
 import componentsThumbnail from "../assets/components.png";
 import avatar1 from "../assets/signals/avatars/avatar-1.jpg";
 import avatar2 from "../assets/signals/avatars/avatar-2.jpg";
@@ -81,15 +82,17 @@ const cssIllustrationTags = ["CSS", "Illustration", "Art Direction"];
 
 export default function SignalsSection() {
   return (
-    <section id="signals" className="relative overflow-hidden px-4 pb-5 pt-6 text-[#1d1712] sm:px-5">
-      <div className="grid min-h-[5.25rem] place-items-center bg-[#131313] px-3 py-3 shadow-[inset_0_0_0_1px_rgba(247,240,227,0.08),inset_0_0_138px_rgba(0,0,0,0.76)] md:min-h-[7.5rem] md:px-4 md:py-3.5 lg:min-h-[12rem] lg:px-[1.28rem] lg:py-[0.92rem]">
-          <span className="m-0 text-center font-display text-[clamp(2.25rem,12vw,12.7rem)] leading-[0.78] tracking-[-0.02em] uppercase text-[#e7dfce] md:text-[clamp(3.5rem,10.8vw,7.25rem)] xl:text-[clamp(3.25rem,14.2vw,12.7rem)]">
-            Pr<span className="font-domaine">o</span>je<span className="c"></span>ts & Rea<span className="font-domaine">c</span>ti<span className="font-domaine">o</span>ns
-          </span>
+    <section id="signals" className="relative overflow-hidden pb-5 pt-4 text-[#1d1712] ">
+      <div className="px-6"> 
+        <div className="grid min-h-[5.25rem] place-items-center  bg-[#131313] px-3 py-3 shadow-[inset_0_0_0_1px_rgba(247,240,227,0.08),inset_0_0_138px_rgba(0,0,0,0.76)] md:min-h-[7.5rem] md:px-4 md:py-3.5 lg:min-h-[12rem] lg:px-[1.28rem] lg:py-[0.92rem]">
+            <span className="m-0 text-center font-display text-[clamp(4rem,12.8vw,80rem)] mt-[10px] leading-[0.48] tracking-[-0.02em] uppercase text-[#e7dfce]">
+              Pr<span className="font-domaine">o</span>je<span className="font-domaine">c</span>ts & Rea<span className="font-domaine">c</span>ti<span className="font-domaine">o</span>ns
+            </span>
+        </div>
       </div>
-      <Separator className="mb-4 mt-6 md:mt-8" variant="normal" />
-      <div className="grid gap-5 border-b border-[#2c2217]/60 pb-4 pt-5 md:gap-0 md:pt-6 xl:grid-cols-[1fr_1.38fr]">
-        <div className="order-2 pb-2 md:order-1 md:border-r md:border-[#2c2217]/45 md:pr-5 md:pb-0 xl:border-r xl:border-[#2c2217]/45 xl:pr-5 xl:pb-0">
+      <Separator className="mb-0 mt-8" variant="normal" />
+      <div className="grid gap-5 border-b border-[#2c2217]/60  md:gap-0  xl:grid-cols-[1fr_1.38fr]">
+        <div className="pb-8 md:pt-8 pt-5 px-6 order-2 md:order-1 md:border-r md:border-[#2c2217]/45 md:pr-5  xl:border-r xl:border-[#2c2217]/45 xl:pr-5 ">
           <h2 className="m-0 max-w-[10ch] font-display text-[clamp(3.35rem,15vw,11.7rem)] uppercase leading-[0.8] tracking-[-0.04em] text-[#17120d] sm:max-w-[8.4ch] md:max-w-[6.4ch] md:text-[clamp(4.2rem,8.5vw,7.2rem)] xl:max-w-none xl:text-[clamp(4.2rem,11vw,11.7rem)] xl:leading-[0.76]">
             Si<span className="font-domaine">g</span>nals
             <span className="mt-2 block text-[clamp(2.15rem,10vw,8.4rem)] leading-[0.88] tracking-[-0.02em] md:text-[clamp(2.7rem,5.8vw,5.5rem)] xl:text-[clamp(2.4rem,8.2vw,8.4rem)] xl:leading-[0.84]">Fr<span className="font-domaine">o</span>m the internet.</span>
@@ -100,11 +103,11 @@ export default function SignalsSection() {
             <span className="h-px flex-1 bg-[rgba(42,33,23,0.48)]" />
           </div>
 
-          <p className="mt-3 max-w-[30ch] font-body text-[clamp(1.02rem,4.1vw,1.5rem)] leading-[1.24] tracking-[-0.004em] text-[#211b14] sm:max-w-[34ch] md:max-w-[25ch] lg:max-w-[28ch] xl:max-w-[40ch]">
+          <p className="mt-5 max-w-[30ch] font-body text-[clamp(1.02rem,4.1vw,1.5rem)] leading-[1.24] tracking-[-0.004em] text-[#211b14] sm:max-w-[34ch] md:max-w-[25ch] lg:max-w-[28ch] xl:max-w-[40ch]">
             A collection of recognition, reactions, and real impact from things I've built.
           </p>
 
-          <dl className="mt-4 grid grid-cols-2 border border-[#5e503f]/55 p-2 sm:grid-cols-4">
+          <dl className="mt-8 grid grid-cols-2 border border-[#5e503f]/55 p-2 sm:grid-cols-4">
             {signalStats.map((item, index) => (
               <div
                 key={item.value + item.line1}
@@ -124,14 +127,14 @@ export default function SignalsSection() {
           </dl>
         </div>
 
-        <div className="order-1 pt-0 md:order-2 md:pl-5 md:pt-0 xl:pl-5 xl:pt-0">
+        <div className="pb-8 md:pt-8 pt-5 px-6 order-1   md:order-2 md:pl-5 xl:pl-5">
           <div className="grid gap-4 md:gap-5 xl:grid-cols-[1fr_1.02fr]">
             <article>
               <h3 className="max-w-[9.6ch] font-display text-[clamp(2.5rem,11vw,5.2rem)] uppercase leading-[0.88] md:max-w-[7ch] md:text-[clamp(2.5rem,4.9vw,4.1rem)] xl:max-w-none xl:text-[clamp(2.9rem,4.2vw,5.2rem)] xl:leading-[0.84]">
                 <span>P<span className="font-domaine">o</span>n<span className="font-domaine">g</span></span> <span className="font-domaine">g</span>ame - 4
                 <span className="block">lines <span className="font-domaine">o</span>f l<span className="font-domaine">o</span><span className="font-domaine">g</span>i<span className="font-domaine">c</span>.</span>
               </h3>
-              <p className="mt-3 max-w-[32rem] font-body text-[clamp(1rem,3.7vw,1.55rem)] leading-[1.24] text-[#251d15] md:max-w-[29rem] md:text-[clamp(1rem,1.65vw,1.28rem)] xl:max-w-[36rem] xl:text-[clamp(1.03rem,1.2vw,1.55rem)]">
+              <p className="mt-5 mb-4 max-w-[32rem] font-body text-[clamp(1rem,3.7vw,1.55rem)] leading-[1.24] text-[#251d15] md:max-w-[29rem] md:text-[clamp(1rem,1.65vw,1.28rem)] xl:max-w-[36rem] xl:text-[clamp(1.03rem,1.2vw,1.55rem)]">
                 A fully functional Pong game with a computer opponent - written in just 4 lines of core logic. Clean, minimal, playable.
               </p>
 
@@ -146,21 +149,46 @@ export default function SignalsSection() {
                     href="https://freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-pong-game"
                     target="_blank"
                     rel="noreferrer"
-                    className="block border border-[#b99d76]/70 bg-[#eadcc6]/35 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_1px_0_rgba(60,42,24,0.08)] md:max-w-[16rem] lg:max-w-none"
+                    className="relative isolate block overflow-hidden p-4 pt-6  md:max-w-[16rem] mt-[-50px] lg:max-w-none"
                   >
-                  <p className="font-domaine font-bold text-[1.3rem] uppercase leading-[0.93]">Now part of the freeCodeCamp curriculum</p>
-                  <p className="mt-3 font-body text-[1rem] leading-[1.26] underline underline-offset-2">freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-pong-game</p>
-                  <span className="mt-2 block text-right font-display text-[1.6rem]">&rarr;</span>
-                </a>
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_24%,rgba(31,23,16,0.045)_0_1px,transparent_1.6px),radial-gradient(circle_at_72%_68%,rgba(31,23,16,0.035)_0_1px,transparent_1.8px),linear-gradient(104deg,rgba(255,255,255,0.12),transparent_38%,rgba(31,23,16,0.035))] opacity-70"
+                    />
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 240 150"
+                      preserveAspectRatio="none"
+                      fill="#d3cac2"
+                      className="pointer-events-none absolute inset-0 h-full w-full bg-[#d3cbc2] border border-[#0000001f]"
+                    >
+                      <path
+                        d="M7 7 L72 7.4 L139 6.8 L233 7.2 L233.3 52 L232.8 98 L233 143 L161 142.5 L84 143.2 L7 142 L7.5 92 L6.8 47 L7 7 Z"
+                        fill="none"
+                        stroke="#2a24244d"
+                        strokeWidth="1.05"
+                        strokeLinecap="square"
+                        strokeLinejoin="miter"
+                        vectorEffect="non-scaling-stroke"
+                      />
+                    </svg>
+                    <p className="relative z-[1] font-domaine font-bold text-[1.3rem] uppercase leading-[0.93]">
+                      <span className="block">Now part of the</span>
+                      <span className="block">freeCodeCamp</span>
+                      <span className="block">curriculum</span>
+                    </p>
+                    <p className="relative z-[1] mt-3 font-body text-[0.8rem] leading-[1.26] underline underline-offset-2">freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-pong-game</p>
+                    <span className="relative z-[1] mt-2 block text-right text-[#262020c2] font-display text-[1.6rem]">&rarr;</span>
+                  </a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="py-1">
+      <div className="">
         <div className="grid lg:grid-cols-2 xl:grid-cols-[2fr_1.55fr_1.55fr]">
-          <article className="border-b border-[#1e1914]/25 p-3 lg:border-r xl:border-b-0">
+          <article className="border-b border-[#1e1914]/25 p-[1.5rem] lg:border-r xl:border-b-0">
             <div className="relative h-full overflow-hidden rounded-[0.9rem] border border-[#e1d4bb]/45 bg-[#1d1f1d] px-3 py-3 text-[#efe6d4] shadow-[inset_0_0_0_1px_rgba(255,242,216,0.05),inset_0_0_116px_rgba(0,0,0,0.78)] sm:rounded-none sm:px-5 sm:py-5">
               <div className="relative z-[1] grid items-start gap-4 sm:gap-5">
                 <div className="min-w-0">
@@ -280,7 +308,7 @@ export default function SignalsSection() {
               </div>
             </div>
           </article>
-          <article className="grid grid-cols-[42%_1fr] items-start gap-3 rounded-[0.9rem] border border-[#2c2217]/25 p-2.5 sm:grid-cols-1 sm:grid-rows-[1fr_auto] sm:gap-4 sm:rounded-none sm:border-0 sm:border-b sm:p-3 lg:border-r xl:border-b-0">
+          <article className="grid grid-cols-[42%_1fr] items-start gap-1 rounded-[0.9rem] border border-[#2c2217]/25 sm:p-[1.5rem] sm:grid-cols-1 sm:grid-rows-[1fr_auto] sm:gap-4 sm:rounded-none sm:border-0 sm:border-b lg:border-r xl:border-b-0">
             <img src={hauntedHouse} alt="Haunted House" className="h-full min-h-[9.5rem] w-full rounded-[0.55rem] border border-[#2c2217]/45 object-cover sm:max-h-[320px] sm:min-h-0 sm:rounded-none lg:max-h-[400px]" />
             <div>
               <h3 className="font-display text-[1.8rem] uppercase leading-[0.92] sm:text-[2.05rem] sm:leading-[0.88]">Haunted House (Three.js)</h3>
@@ -301,7 +329,7 @@ export default function SignalsSection() {
             </div>
           </article>
 
-          <article className="grid grid-cols-[42%_1fr] items-start gap-3 rounded-[0.9rem] border border-[#2c2217]/25 p-2.5 sm:grid-cols-[11.4rem_1fr] sm:gap-4 sm:rounded-none sm:border-0 sm:p-3 xl:grid-cols-1 ">
+          <article className="grid grid-cols-[42%_1fr] items-start gap-3 rounded-[0.9rem] border border-[#2c2217]/25 p-2.5 sm:grid-cols-[11.4rem_1fr] sm:gap-4 sm:rounded-none sm:border-0 sm:p-[1.5rem] xl:grid-cols-1 ">
             <img src={cssIllustrationCollection} alt="CSS Illustration Collection" className="h-full min-h-[9.5rem] w-full rounded-[0.55rem] border border-[#2c2217]/45 object-cover bg-[repeating-linear-gradient(100deg,rgba(35,27,20,0.02)_0_12px,transparent_12px_16px)] sm:max-h-[320px] sm:min-h-0 sm:rounded-none xl:max-h-[400px]" />
             <div>
               <h3 className="font-display text-[1.78rem] uppercase leading-[0.92] sm:text-[2.05rem] sm:leading-[0.88]"><span className="font-domaine">C</span>SS Illustrati<span className="font-domaine">o</span>n <span className="font-domaine">Co</span>lle<span className="font-domaine">c</span>ti<span className="font-domaine">o</span>n.</h3>

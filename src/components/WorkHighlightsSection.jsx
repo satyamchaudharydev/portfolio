@@ -1,7 +1,7 @@
-import glitchHouseLogo from "../assets/glitchhouse-logo.webp";
-import zuaiLogo from "../assets/work/zuai.png";
-import brightchampsLogo from "../assets/work/brightchamps.png";
-import tekieLogo from "../assets/work/tekie-logo.webp";
+import glitchHousePreview from "../assets/work/glitch tb-new.mp4";
+import brightchampsPreview from "../assets/work/brightchamps-preview.png";
+import tekiePreview from "../assets/work/tekie-preview.png";
+import zuaiPreview from "../assets/work/zuAi-preview.png";
 import texture1 from "../assets/textures/ink-texture-1.png";
 import texture2 from "../assets/textures/ink-texture-2.png";
 import texture3 from "../assets/textures/ink-texture-3.png";
@@ -17,8 +17,8 @@ const workCards = [
     summary:
       "Discover and build high-quality projects through structured build guides, comprehensive component lists, and personalised recommendations. Launching soon on iOS, Android & Web.",
     tags: ["NEXT.JS", "EXPO", "NATIVEWIND", "POSTGRES", "DRIZZLE", "TRPC", "REDIS"],
-    logoSrc: glitchHouseLogo,
-    logoAlt: "Glitch House",
+    actionHref: "https://glitch.house",
+    videoSrc: glitchHousePreview,
     texture: texture2,
     overlayTint: "rgba(10, 17, 24, 0.36)",
     mediaTiles: [texture2, texture3, texture1, texture1, texture2, texture3]
@@ -30,8 +30,8 @@ const workCards = [
     years: "2024 - 2025",
     summary: "Streaming AI tutoring UI and collaborative lesson experiences.",
     tags: ["NEXT.JS", "REACT", "ZUSTAND", "SSE", "MARKDOWN"],
-    logoSrc: zuaiLogo,
-    logoAlt: "ZuAi",
+    actionHref: "https://www.zuai.co",
+    imageSrc: zuaiPreview,
     texture: texture1,
     overlayTint: "rgba(14, 10, 26, 0.34)",
     mediaTiles: [texture2, texture1, texture3, texture3, texture2, texture1]
@@ -43,8 +43,8 @@ const workCards = [
     years: "2024 - 2024",
     summary: "Interactive classroom flows and student-first learning interfaces.",
     tags: ["REACT NATIVE", "EXPO", "TYPESCRIPT", "FRAMER"],
-    logoSrc: brightchampsLogo,
-    logoAlt: "BrightChamps",
+    actionHref: "https://brightchamps.com",
+    imageSrc: brightchampsPreview,
     texture: texture3,
     overlayTint: "rgba(8, 16, 22, 0.36)",
     mediaTiles: [texture1, texture2, texture3, texture2, texture1, texture3]
@@ -56,8 +56,8 @@ const workCards = [
     years: "2022 - 2025",
     summary: "Coding tools and browser-based lessons for early STEM learners.",
     tags: ["REACT", "VITE", "PYODIDE", "BLOCKLY", "FLASK"],
-    logoSrc: tekieLogo,
-    logoAlt: "Tekie",
+    actionHref: "https://www.tekie.in",
+    imageSrc: tekiePreview,
     texture: texture1,
     overlayTint: "rgba(10, 17, 24, 0.38)",
     mediaTiles: [texture3, texture2, texture1, texture1, texture3, texture2]
@@ -75,12 +75,10 @@ export default function WorkHighlightsSection() {
   const projectCards = workCards.slice(1);
 
   return (
-    <section className="relative isolate overflow-hidden bg-transparent p-4 text-[#1f1913] sm:p-5 md:max-lg:p-3">
-      <div className="mb-[0.95rem] flex flex-col items-start gap-[1.5vw] md:flex-row md:items-stretch">
- 
+    <section className="relative isolate overflow-hidden bg-transparent p-4 text-[#1f1913] sm:p-5 md:max-lg:p-3 sm:pt-0">
+      <div className="flex flex-col items-start gap-[1.5vw] md:flex-row md:items-stretch py-8">
         <div className="grid w-full place-items-center bg-[#131313] px-[0.95rem] shadow-[inset_0_0_0_1px_rgba(247,240,227,0.08),inset_0_0_138px_rgba(0,0,0,0.76)] md:w-auto md:max-lg:px-[0.72rem] lg:px-[1.28rem] ">
           <span className="m-0 font-display text-[16vw] leading-[0.2] pb-[0px] pt-[22px] tracking-[-0.02em] uppercase text-[#e7dfce] md:max-lg:text-[clamp(4.1rem,11.6vw,7.7rem)]">
-     
             Experien<span className="font-domaine">c</span>e
           </span>
         </div>
@@ -89,9 +87,9 @@ export default function WorkHighlightsSection() {
           shipping interfaces, systems, and product foundations with a focus on clarity and craft.
         </p>
       </div>
-      <Separator variant="normal" />
+      <Separator variant="normal" className="mt-0" />
 
-      <div className="grid items-start gap-[0.9rem] pt-8 min-[720px]:max-lg:grid-cols-1 lg:grid-cols-[minmax(0,0.40fr)_minmax(0,0.60fr)] lg:gap-[1rem]">
+      <div className="grid items-start gap-[2rem] pt-8 min-[720px]:max-lg:grid-cols-1 lg:grid-cols-[minmax(0,0.45fr)_minmax(0,0.55fr)]">
         <aside className="flex min-w-0 flex-col">
           <div className="flex items-start justify-between gap-[0.95rem] pt-[0.14rem] max-md:gap-[0.5rem]">
           </div>
@@ -119,15 +117,16 @@ export default function WorkHighlightsSection() {
             years={featuredCard.years}
             summary={featuredCard.summary}
             tags={featuredCard.tags}
-            logoSrc={featuredCard.logoSrc}
-            logoAlt={featuredCard.logoAlt}
             mediaStyle={makeCardMediaStyle(featuredCard.texture, featuredCard.overlayTint)}
             mediaTiles={featuredCard.mediaTiles}
+            imageSrc={featuredCard.imageSrc}
+            videoSrc={featuredCard.videoSrc}
+            actionHref={featuredCard.actionHref}
           />
         </div>
       </div>
 
-      <div className="mt-[0.9rem] grid grid-cols-1 gap-[0.9rem] min-[720px]:max-lg:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-[2rem] grid grid-cols-1 gap-[2rem] min-[720px]:max-lg:grid-cols-2 lg:grid-cols-3">
         {projectCards.map((card) => (
           <WorkProjectCard
             key={card.title}
@@ -136,10 +135,11 @@ export default function WorkHighlightsSection() {
             years={card.years}
             summary={card.summary}
             tags={card.tags}
-            logoSrc={card.logoSrc}
-            logoAlt={card.logoAlt}
             mediaStyle={makeCardMediaStyle(card.texture, card.overlayTint)}
             mediaTiles={card.mediaTiles}
+            imageSrc={card.imageSrc}
+            videoSrc={card.videoSrc}
+            actionHref={card.actionHref}
           />
         ))}
       </div>

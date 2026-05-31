@@ -1,3 +1,5 @@
+import ProjectActionChip from "./ProjectActionChip";
+
 export default function WorkProjectCard({
   featured = false,
   title,
@@ -7,11 +9,13 @@ export default function WorkProjectCard({
   tags = [],
   mediaStyle,
   mediaTiles = [],
-  logoSrc,
-  logoAlt
+  imageSrc,
+  videoSrc,
+  actionLabel = "View Project",
+  actionHref
 }) {
   const articleClass =
-    "relative flex h-full flex-col border border-[rgba(52,43,32,0.54)] p-[0.56rem] shadow-[inset_0_0_0_1px_rgba(118,101,79,0.21)] before:pointer-events-none before:absolute before:inset-[4px] before:border before:border-dashed before:border-[rgba(53,44,33,0.34)] before:content-['']";
+    "group relative flex h-full cursor-pointer flex-col border border-[rgba(52,43,32,0.54)] p-[0.56rem] shadow-[inset_0_0_0_1px_rgba(118,101,79,0.21)] before:pointer-events-none before:absolute before:inset-[4px] before:border before:border-dashed before:border-[rgba(53,44,33,0.34)] before:content-['']";
 
   const mediaClass = `relative w-full overflow-hidden border border-[rgba(20,20,19,0.66)] bg-[#111418] bg-cover bg-center ${
     featured ? "aspect-[16/10] md:aspect-[16/7.2]" : "aspect-[16/10] md:aspect-[16/10.1]"
@@ -25,14 +29,36 @@ export default function WorkProjectCard({
     ? "mt-[0.5rem] m-0 font-body text-[0.98rem] leading-[1.28] tracking-[-0.006em] text-[#1f1a15] md:text-[clamp(1.46rem,1.34vw,2.1rem)]"
     : "mt-[0.5rem] m-0 font-body text-[0.98rem] leading-[1.28] tracking-[-0.006em] text-[#1f1a15] md:text-[clamp(1.18rem,1.12vw,1.7rem)]";
 
-  const logoClass = featured
-    ? "absolute left-1/2 top-[58%] z-[1] h-auto w-[min(44%,13.6rem)] max-h-[4.2rem] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_3px_10px_rgba(0,0,0,0.42)] sm:max-h-[5.2rem] sm:w-[min(32%,13.6rem)]"
-    : "absolute left-1/2 top-[58%] z-[1] h-auto w-[min(58%,10.1rem)] max-h-[3.8rem] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_3px_10px_rgba(0,0,0,0.42)] sm:max-h-[4.8rem] sm:w-[min(46%,10.1rem)]";
 
   return (
     <article className={articleClass}>
+      {actionHref ? (
+        <span
+          className="pointer-events-none absolute inset-0 z-[2] bg-[rgba(9,10,12,0.04)] opacity-0 transition-opacity duration-200 sm:group-hover:opacity-100 sm:group-focus-within:opacity-100"
+          aria-hidden="true"
+        />
+      ) : null}
       <div className={mediaClass} style={mediaStyle}>
-        {mediaTiles.length ? (
+        {videoSrc ? (
+          <video
+            className="absolute inset-0 h-full w-full object-cover saturate-50"
+            src={videoSrc}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label={`${title} preview video`}
+          />
+        ) : imageSrc ? (
+          <img
+            src={imageSrc}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover saturate-50"
+            aria-hidden="true"
+            loading="lazy"
+          />
+        ) : mediaTiles.length ? (
           <div className="absolute inset-0 grid grid-cols-3 grid-rows-2 gap-[2px] bg-[rgba(14,15,18,0.94)]" aria-hidden="true">
             {mediaTiles.map((tileSrc, tileIndex) => (
               <span
@@ -54,7 +80,11 @@ export default function WorkProjectCard({
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.6)),radial-gradient(120%_116%_at_100%_0%,rgba(255,255,255,0.18),transparent_36%)]"
           aria-hidden="true"
         />
-        {logoSrc ? <img src={logoSrc} alt={logoAlt ?? `${title} logo`} className={logoClass} /> : null}
+        {actionHref ? (
+          <div className="absolute inset-0 z-[3] flex items-end justify-start p-4 opacity-100 transition-opacity duration-200 sm:opacity-0 sm:group-hover:opacity-100 sm:group-focus-within:opacity-100">
+            <ProjectActionChip label={actionLabel} href={actionHref} size="compact" />
+          </div>
+        ) : null}
       </div>
 
       <div className="relative z-[1] mt-[0.45rem] flex flex-1 flex-col gap-2 px-2 py-3 sm:py-4">
