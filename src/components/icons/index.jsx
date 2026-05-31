@@ -111,3 +111,4 @@ export function RibbonEndIcon({
     </svg>
   );
 }
+

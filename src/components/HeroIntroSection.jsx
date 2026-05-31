@@ -37,7 +37,7 @@ export default function HeroIntroSection({ heroPortrait }) {
 
       <div className="px-3 py-4 sm:px-6 md:py-4">
         <h1
-          className="mt-2 text-center text-[clamp(2.2rem,10vw,7.5rem)] leading-[0.95] text-ink"
+          className="mt-2 text-center text-[clamp(2.2rem,10vw,7.5rem)] leading-[0.95] text-ink text-headline"
           style={{ fontFamily: '"UnifrakturCook", serif' }}
         >
           The Satyam Gazette
@@ -47,11 +47,11 @@ export default function HeroIntroSection({ heroPortrait }) {
       <div className="mt-4 grid gap-0 border-t-[1px] border-inkSoft px-4 sm:px-8 lg:grid-cols-[1fr_1.35fr]">
         <article className="px-0 pb-6 pt-6 lg:border-r-[1px] lg:border-inkSoft lg:pr-8">
           <div className="relative flex flex-col items-start gap-3 pt-3 lg:flex-row lg:items-center">
-            <h2 className="pr-[6.4rem] font-display uppercase leading-[0.84] tracking-[-0.02em] text-ink sm:pr-[7.8rem] lg:pr-0 lg:text-[clamp(2.7rem,12vw,7.75rem)] lg:leading-[0.88]">
-              <span className="ml-1 block text-[3.35rem] font-[700] tracking-[-0.01em] sm:text-[clamp(3.9rem,8.6vw,5.65rem)] lg:text-[clamp(1.8rem,7vw,6.25rem)]">
+            <h2 className="pr-[6.4rem] font-display uppercase leading-[0.84] tracking-[-0.02em] text-ink sm:pr-[7.8rem] lg:pr-0 lg:leading-[0.88]">
+              <span className="ml-1 block font-display text-hero-line font-[700] tracking-[-0.01em]">
                 I <span className="font-domaine">co</span>de <span className="font-headline">&amp;</span>
               </span>
-              <span className="block text-[5rem] font-[800] tracking-[0.02em] sm:text-[clamp(5.7rem,12vw,7.2rem)] lg:text-[clamp(2.3rem,9vw,7.5rem)]">
+              <span className="block font-display text-[5rem] font-[800] tracking-[0.02em] sm:text-[clamp(5.7rem,12vw,7.2rem)] lg:text-[clamp(2.3rem,9vw,7.5rem)]">
                 <span className="font-domaine">cr</span>eate
               </span>
               <span className="ml-1 block text-[4rem] font-[600] tracking-[0.02em] sm:text-[clamp(4.7rem,10vw,6.7rem)] lg:text-[clamp(2rem,8vw,7.5rem)]">

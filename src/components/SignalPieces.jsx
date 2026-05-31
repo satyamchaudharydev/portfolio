@@ -1,18 +1,32 @@
 import quincyLarsonPhoto from "../assets/quincy-larson.png";
-import { RoughRoundedRectIcon, TweetIcon } from "./icons";
+import pongPreview from "../assets/signals/pong-preview.png";
+import ProjectActionChip from "./ProjectActionChip";
+import { TweetIcon } from "./icons";
 
-export function PongPreview() {
+const PONG_PROJECT_HREF =
+  "https://freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-pong-game";
+
+export function PongPreview({
+  actionHref = PONG_PROJECT_HREF,
+  actionLabel = "View Project"
+}) {
   return (
-    <div className="relative aspect-[16/8.4] overflow-hidden rounded-[3px] border border-[#1d1b17]/60 bg-[#0f141c] shadow-[0_8px_16px_rgba(0,0,0,0.2)]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_45%,rgba(45,66,99,0.35),transparent_42%),radial-gradient(circle_at_78%_40%,rgba(35,58,84,0.28),transparent_44%),repeating-linear-gradient(to_bottom,rgba(255,255,255,0.03)_0_1px,transparent_1px_8px)]" />
-      <span className="absolute left-1/2 top-0 h-full -translate-x-1/2 border-l-2 border-dashed border-[#ece6d8]/80" />
-      <span className="absolute left-[8%] top-[36%] h-[17%] w-[2.6%] bg-[#f2ecde]" />
-      <span className="absolute right-[8%] top-[35%] h-[17%] w-[2.6%] bg-[#f2ecde]" />
-      <span className="absolute left-[67%] top-[61%] h-[4.4%] w-[2.2%] bg-[#f2ecde]" />
-      <div className="absolute inset-x-0 top-[8%] flex justify-center gap-[5.2rem] font-mono text-[clamp(1.15rem,2vw,1.7rem)] font-semibold text-[#ece6d8]">
-        <span>2</span>
-        <span>5</span>
-      </div>
+    <div className="group relative w-[400px] h-[400px] outline outline-[#1d1b17]/60 outline-offset-4">
+      <img
+        src={pongPreview}
+        alt="Pong game preview"
+        className="absolute inset-0 h-full w-full "
+        loading="lazy"
+      />
+      <span
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.6)),radial-gradient(120%_116%_at_100%_0%,rgba(255,255,255,0.18),transparent_36%)]"
+        aria-hidden="true"
+      />
+      {actionHref ? (
+        <div className="absolute inset-0 z-[1] flex items-end justify-start p-4 opacity-100 transition-opacity duration-200 sm:opacity-0 sm:group-hover:opacity-100 sm:group-focus-within:opacity-100">
+          <ProjectActionChip label={actionLabel} href={actionHref} size="compact" />
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -21,7 +35,7 @@ export function PongPreview() {
 export function Quote({ text }) {
   return (
     <figure className="m-0">
-      <blockquote className="font-body text-[1.12rem] italic leading-[1.25] text-[#261d15]">&ldquo;{text}&rdquo;</blockquote>
+      <blockquote className="font-body text-[1.1rem] italic leading-[1.25] text-[#261d15]">&ldquo;{text}&rdquo;</blockquote>
     </figure>
   );
 }
@@ -105,29 +119,29 @@ function SketchUnderline({ className = "", strokeWidth = 2.35 }) {
 
 function SketchTweetCard({ children }) {
   return (
-    <div className="relative mt-4">
-      <div className="relative max-w-[20.5rem] overflow-hidden sm:max-w-[22rem]">
-        <RoughRoundedRectIcon
+    <div className="relative mt-4 mr-4 ml-[-3px]">
+      <div className="relative isolate max-w-[20.5rem] overflow-hidden sm:max-w-[22rem]">
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 240 150"
+          preserveAspectRatio="none"
           className="pointer-events-none absolute inset-0 h-full w-full"
-          stroke="#1d1510"
-        />
-        <div className="relative z-[1] px-3 py-3 sm:px-3.5 sm:py-3.5">
+        >
+          <path
+            d="M7 7 L72 7.4 L139 6.8 L233 7.2 L233.3 52 L232.8 98 L233 143 L161 142.5 L84 143.2 L7 142 L7.5 92 L6.8 47 L7 7 Z"
+            fill="none"
+            stroke="#2a24244d"
+            strokeWidth="1.05"
+            strokeLinecap="square"
+            strokeLinejoin="miter"
+            vectorEffect="non-scaling-stroke"
+          />
+        </svg>
+  
+        <div className="relative z-[1] p-2">
           {children}
         </div>
       </div>
-    </div>
-  );
-}
-
-function QuincyPortraitMedallion() {
-  return (
-    <div className="relative ml-8 aspect-[1] w-[5.25rem] sm:w-[5.75rem] lg:w-[4rem]">
-        <img
-          src={quincyLarsonPhoto}
-          alt="Quincy Larson"
-          className="h-full w-full object-cover object-[center_22%] grayscale contrast-[1.07] brightness-[1.02] sepia-[0.14]"
-          loading="lazy"
-        />
     </div>
   );
 }
@@ -146,9 +160,7 @@ export function QuincyRecognitionStory() {
                 (Founder, freeCodeCamp)
               </p>
             </div>
-            <div className="shrink-0 md:self-start lg:self-auto">
-              <QuincyPortraitMedallion />
-            </div>
+           
           </div>
           <div className="relative justify-self-start md:justify-self-center">
         </div>
@@ -156,12 +168,12 @@ export function QuincyRecognitionStory() {
 
        
 
-      <div className="mt-6 max-w-[42rem]">
+      <div className="mt-3 max-w-[42rem]">
         <p className="flex flex-wrap items-center gap-x-3 gap-y-2 font-body text-[clamp(0.96rem,3.5vw,1.16rem)] leading-[1.15] text-[#1c150f] md:text-[clamp(0.94rem,1.3vw,1.06rem)] xl:text-[clamp(0.96rem,1.2vw,1.16rem)]">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#17110c] text-[#f5ecdd]">
+          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#17110c] text-[#f5ecdd]">
             <TweetIcon className="h-3.5 w-3.5" />
           </span>
-          <span className="text-balance">
+          <span className="text-balance mt-2">
             Quincy Larson{" "}
             <span className="relative inline-flex flex-col">
               <span className="relative z-[1]">noticed</span>
@@ -174,15 +186,15 @@ export function QuincyRecognitionStory() {
           <div className="flex items-start justify-between gap-3 px-3 mt-2">
             <div className="flex min-w-0 items-start gap-2.5">
               <div className="min-w-0 flex gap-2">
-                <img src={quincyLarsonPhoto} width={40} height={40} />
+                <img src={quincyLarsonPhoto} width={40} height={40} className="h-[40px] w-auto" />
                 <div>
                   <p className="flex flex-wrap items-center gap-1.5 font-body text-[0.84rem] font-semibold leading-none text-[#1e1710] sm:text-[0.92rem]">
-                    <span>Quincy Larson</span>
+                    <span className="text-[15px]">Quincy Larson</span>
                     <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#1e1710] text-[0.56rem] leading-none text-[#f3eadb]">
                       ✓
                     </span>
                   </p>
-                  <p className="mt-1.5 font-body text-[0.82rem] leading-none text-[#5f5042] sm:text-[0.92rem]">@ossia</p>
+                  <p className="mt-1.5 font-body text-[0.62rem] leading-none text-[#5f5042] sm:text-[0.92rem]">@ossia</p>
                 </div>
               </div>
             </div>
@@ -190,13 +202,13 @@ export function QuincyRecognitionStory() {
           </div>
 
           <div className="pl-1 sm:pl-1.5">
-            <p className="mb-2 mt-2 ml-8 font-domaine text-[clamp(1.2rem,1.6vw,2.42rem)] italic leading-[0.98] tracking-[-0.04em] text-[#16100b] ">
+            <p className="mb-2 mt-2 ml-6 font-domaine text-[1.4rem] italic leading-[0.98] tracking-[-0.0] text-[#16100b] ">
               &ldquo;Awesome, can you link to the pen?&rdquo;
             </p>
           </div>
         </SketchTweetCard>
 
-        <div className="mt-4 max-w-[33rem] font-body text-[clamp(1rem,3.8vw,1.08rem)] leading-[1.18] text-[#201710] md:text-[clamp(0.96rem,1.1vw,1rem)] xl:text-[clamp(1.2rem,1.04vw,1rem)]">
+        <div className="mt-6 max-w-[33rem] font-body text-[clamp(1rem,3.8vw,1.08rem)] leading-[1.18] text-[#201710] md:text-[clamp(0.96rem,1.1vw,1rem)] xl:text-[clamp(1.2rem,1.04vw,1rem)]">
           <span>That reply led to a </span>
           <span className="relative inline-flex items-center justify-center px-3 py-0.5 font-domaine text-[1.05em] uppercase leading-none text-[#1a120d]">
             DM
@@ -226,65 +238,3 @@ export function QuincyRecognitionStory() {
   );
 }
 
-export function ProjectActionChip({ label, href }) {
-  const isProject = label === "View Project";
-  const isVideo = label === "View Video";
-  const isApk = label === "Download APK";
-
-  const palette = {
-          outer: "bg-[#f1e7d8] text-[#2a2118]",
-          inner: "border-[#b7a58f]/70",
-          divider: "border-[#756c638a]",
-          icon: "text-[#e5791b]",
-          text: "text-[#2a2118]"
-        };
-
-  const shapeStyle = {
-    clipPath: "polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px)"
-  };
-
-  const icon = isProject ? "\u2197" : isApk ? "\u2193" : "\u25B6";
-
-  const content = (
-    <>
-      <span
-        aria-hidden="true"
-        className={`absolute inset-[3px] border border-dashed ${palette.inner}`}
-        style={shapeStyle}
-      />
-      <span className="relative z-[1] flex items-center">
-        <span className={`grid h-[3.1rem] w-[3.3rem] place-items-center border-r ${palette.divider} ${palette.icon}`}>
-          <span className={`font-display text-[1.7rem] leading-none ${isVideo ? "translate-x-[1px]" : ""}`}>{icon}</span>
-        </span>
-        <span className={`px-5 font-domaine text-[1.02rem] uppercase tracking-[0.06em] ${palette.text}`}>
-          {label}
-        </span>
-      </span>
-    </>
-  );
-
-  if (!href) {
-    return (
-      <span
-        className={`relative inline-flex min-h-[2.55rem] overflow-hidden opacity-60 sm:min-h-[3.25rem] ${palette.outer}`}
-        style={shapeStyle}
-        aria-disabled="true"
-      >
-        {content}
-      </span>
-    );
-  }
-
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className={`group relative inline-flex min-h-[2.55rem] overflow-hidden shadow-[0_1px_0_rgba(255,255,255,0.24)] transition-transform duration-200 hover:-translate-y-[1px] sm:min-h-[3.25rem] ${palette.outer}`}
-      style={shapeStyle}
-    >
-      
-      {content}
-    </a>
-  );
-}

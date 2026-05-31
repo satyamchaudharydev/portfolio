@@ -1,6 +1,6 @@
 const Separator = ({ className = "", variant = "decorative" }) => {
   if (variant === "normal") {
-    return <div className={`mt-4 h-px w-full bg-[rgba(36,29,22,0.66)] ${className}`} aria-hidden="true" />;
+    return <div className={`mt-4 h-px w-full bg-[rgba(36,29,22,0.3)] ${className}`} aria-hidden="true" />;
   }
 
   return (
