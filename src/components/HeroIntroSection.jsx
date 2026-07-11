@@ -1,5 +1,6 @@
 import ArchiveStamp from "./ArchiveStamp";
 import { RibbonEndIcon } from "./icons";
+import NewspaperGutter from "./NewspaperGutter";
 
 const heroTickerItems = [
   "Building Sigma so developers can edit UI as easily as Figma",
@@ -9,17 +10,17 @@ const heroTickerItems = [
 
 export default function HeroIntroSection({ heroPortrait }) {
   return (
-    <section className="bg-transparent shadow-none border-b border-ink/30">
-        <div className="relative w-[97%] mx-auto mt-2">
+    <section className="relative overflow-hidden bg-transparent shadow-none border-b border-ink/30">
+        <div className="relative mx-auto mt-2 w-[calc(100%-1.4rem)] sm:w-[98%]">
           <RibbonEndIcon
             side="left"
-            className="pointer-events-none absolute left-0 top-1/2 z-[1] h-[calc(100%+0.6rem)] w-7 -translate-x-[58%] -translate-y-1/2 text-ink sm:w-8"
+            className="pointer-events-none absolute left-0 top-1/2 z-[1] h-[calc(100%+0.35rem)] w-5 -translate-x-[46%] -translate-y-1/2 text-ink sm:h-[calc(100%+0.6rem)] sm:w-8 sm:-translate-x-[58%]"
           />
           <RibbonEndIcon
             side="right"
-            className="pointer-events-none absolute right-0 top-1/2 z-[1] h-[calc(100%+0.6rem)] w-7 translate-x-[58%] -translate-y-1/2 text-ink sm:w-8"
+            className="pointer-events-none absolute right-0 top-1/2 z-[1] h-[calc(100%+0.35rem)] w-5 translate-x-[46%] -translate-y-1/2 text-ink sm:h-[calc(100%+0.6rem)] sm:w-8 sm:translate-x-[58%]"
           />
-          <div className="overflow-hidden bg-ink py-2.5 font-mono text-[11px] uppercase tracking-[0.12em] text-paper sm:text-xs">
+          <div className="overflow-hidden bg-primary py-2.5 font-mono text-[9px] uppercase tracking-[0.12em] text-paper sm:text-xs">
             <div className="marquee-track flex w-max items-center gap-8 whitespace-nowrap px-4 sm:gap-10 sm:px-6">
               {[...Array(4)].map((_, index) => (
                 <span key={index} className="inline-flex items-center gap-8 sm:gap-10">
@@ -35,23 +36,24 @@ export default function HeroIntroSection({ heroPortrait }) {
           </div>
         </div>
 
-      <div className="px-3 py-4 sm:px-6 md:py-4">
+      <div className="px-1 py-1 sm:px-6 md:py-4">
         <h1
-          className="mt-2 text-center text-[clamp(2.2rem,10vw,7.5rem)] leading-[0.95] text-ink text-headline"
+          className="mt-2 text-center leading-[0.95] text-primary text-headline"
           style={{ fontFamily: '"UnifrakturCook", serif' }}
         >
           The Satyam Gazette
         </h1>
       </div>
 
-      <div className="mt-4 grid gap-0 border-t-[1px] border-inkSoft px-4 sm:px-8 lg:grid-cols-[1fr_1.35fr]">
-        <article className="px-0 pb-6 pt-6 lg:border-r-[1px] lg:border-inkSoft lg:pr-8">
+      <div className="mt-4 grid relative gap-0 border-t-[1px] border-inkSoft px-4 sm:px-8 lg:grid-cols-[1fr_1.35fr]">
+        <NewspaperGutter className="opacity-30" />
+        <article className="px-0 sm:pb-6 sm:pt-6 pt-2 lg:border-r-[1px] lg:border-inkSoft lg:pr-8">
           <div className="relative flex flex-col items-start gap-3 pt-3 lg:flex-row lg:items-center">
-            <h2 className="pr-[6.4rem] font-display uppercase leading-[0.84] tracking-[-0.02em] text-ink sm:pr-[7.8rem] lg:pr-0 lg:leading-[0.88]">
-              <span className="ml-1 block font-display text-hero-line font-[700] tracking-[-0.01em]">
+            <h2 className="pr-[6.4rem] font-display uppercase leading-[0.84] tracking-[-0.02em] text-primary sm:pr-[7.8rem] lg:pr-0 lg:leading-[0.88] text-primary">
+              <span className="ml-1 block font-display text-[clamp(2.7rem,12vw,7.2rem)] font-[700] tracking-[-0.01em]">
                 I <span className="font-domaine">co</span>de <span className="font-headline">&amp;</span>
               </span>
-              <span className="block font-display text-[5rem] font-[800] tracking-[0.02em] sm:text-[clamp(5.7rem,12vw,7.2rem)] lg:text-[clamp(2.3rem,9vw,7.5rem)]">
+              <span className="block font-display font-[800] tracking-[0.02em] text-[clamp(3.7rem,12vw,7.2rem)]">
                 <span className="font-domaine">cr</span>eate
               </span>
               <span className="ml-1 block text-[4rem] font-[600] tracking-[0.02em] sm:text-[clamp(4.7rem,10vw,6.7rem)] lg:text-[clamp(2rem,8vw,7.5rem)]">
@@ -60,10 +62,10 @@ export default function HeroIntroSection({ heroPortrait }) {
             </h2>
             <ArchiveStamp className="absolute right-0 top-5 h-[4.9rem] w-[4.9rem] shrink-0 rotate-[8deg] opacity-80 sm:top-7 sm:h-[6.1rem] sm:w-[6.1rem] lg:relative lg:top-24 lg:h-[6.2rem] lg:w-[6.2rem] lg:self-start" />
           </div>
-          <div className="mt-3 border-b border-ink/30" />
+          <div className="mt-5 border-b border-ink/30" />
 
 
-          <div className="mt-5 space-y-4 text-[clamp(1.02rem,4.4vw,1.38rem)] leading-[1.38] text-[#17130f] sm:text-[1.18rem] md:text-[1.28rem]">
+          <div className="sm:mt-5 mt-3 space-y-4 text-[clamp(0.8rem,4.4vw,1.38rem)] leading-[1.38] text-primary sm:text-[1.18rem] md:text-[1.28rem]">
             <p className="dropcap font-body text-justify font-[400]">
               I started coding to build things—it's what keeps me going and gives
               me confidence. Creating through code empowers me, and I'm inspired
@@ -78,7 +80,7 @@ export default function HeroIntroSection({ heroPortrait }) {
                 loading="lazy"
                 alt="Amterdam-based independent Designer &amp; Developer with focus on Art direction, Motion and Branding."
               />
-              <span className="font-instrument text-[1.05rem] font-[500] italic leading-[1.15] sm:text-[1.12rem]">
+              <span className="font-instrument text-[clamp(0.8rem,4.4vw,1.38rem)]  font-[500] italic leading-[1.15] sm:text-[1.12rem]">
                 Everything around us is someone's life's work.
               </span>
               <img
@@ -89,7 +91,7 @@ export default function HeroIntroSection({ heroPortrait }) {
                 alt="Amterdam-based independent Designer &amp; Developer with focus on Art direction, Motion and Branding."
               />
             </div>
-            <p className="text-justify">
+            <p className="text-justify ">
               That idea stays with me. I build to understand, design to express,
               and make things that carry a part of who I am. I want my work to
               show not just what I can do, but how I see the world.

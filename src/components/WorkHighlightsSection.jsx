@@ -75,35 +75,29 @@ export default function WorkHighlightsSection() {
   const projectCards = workCards.slice(1);
 
   return (
-    <section className="relative isolate overflow-hidden bg-transparent p-4 text-[#1f1913] sm:p-5 md:max-lg:p-3 sm:pt-0">
-      <div className="flex flex-col items-start gap-[1.5vw] md:flex-row md:items-stretch py-8">
-        <div className="grid w-full place-items-center bg-[#131313] px-[0.95rem] shadow-[inset_0_0_0_1px_rgba(247,240,227,0.08),inset_0_0_138px_rgba(0,0,0,0.76)] md:w-auto md:max-lg:px-[0.72rem] lg:px-[1.28rem] ">
-          <span className="m-0 font-display text-[16vw] leading-[0.2] pb-[0px] pt-[22px] tracking-[-0.02em] uppercase text-[#e7dfce] md:max-lg:text-[clamp(4.1rem,11.6vw,7.7rem)]">
+    <section className="relative isolate overflow-hidden bg-transparent p-4 text-primary sm:p-5 md:max-lg:p-3 sm:pt-0">
+      <div className="flex flex-col items-start gap-5 sm:py-8 py-1 max-md:gap-4 md:flex-row md:items-stretch md:gap-[1.5vw]">
+        <div className="paper-knockout-panel grid w-full shrink-0 place-items-center px-[0.95rem] pt-4 shadow-[inset_0_0_0_1px_rgba(247,240,227,0.08),inset_0_0_138px_rgba(0,0,0,0.76)] max-md:py-5 md:w-auto md:max-lg:px-[0.72rem] lg:px-[1.28rem]">
+          <span className="m-0 block font-display text-[clamp(2.65rem,16vw,50.25rem)] leading-[0.78] tracking-[-0.02em] uppercase max-md:whitespace-nowrap md:max-lg:leading-[0.72] lg:leading-[0.68]">
             Experien<span className="font-domaine">c</span>e
           </span>
         </div>
-        <p className="m-0 max-w-[28ch] font-body text-[2vw] leading-[1.08] tracking-[-0.008em] text-[#1a1814]  lg:self-start lg:pt-[0.74rem] max-md:max-w-none">
+        <p className="m-0 max-w-[28ch] font-body text-[clamp(1.05rem,4.2vw,1.35rem)] leading-[1.32] tracking-[-0.008em] text-[#1a1814] max-md:max-w-none md:text-[2vw] md:leading-[1.08] lg:self-start lg:pt-[0.74rem]">
           Over the past 5+ years, I've worked across product, AI tutoring, hardware discovery, and coding education -
           shipping interfaces, systems, and product foundations with a focus on clarity and craft.
         </p>
       </div>
-      <Separator variant="normal" className="mt-0" />
-
-      <div className="grid items-start gap-[2rem] pt-8 min-[720px]:max-lg:grid-cols-1 lg:grid-cols-[minmax(0,0.45fr)_minmax(0,0.55fr)]">
+      <Separator variant="normal" className="mb-0 !mt-0" />
+      <div className="grid items-start gap-[2rem] sm:pt-8 pt-2 min-[720px]:max-lg:grid-cols-1 lg:grid-cols-[minmax(0,0.45fr)_minmax(0,0.55fr)]">
         <aside className="flex min-w-0 flex-col">
-          <div className="flex items-start justify-between gap-[0.95rem] pt-[0.14rem] max-md:gap-[0.5rem]">
-          </div>
-
-          <span className="mt-[0.54rem] max-w-[7.18ch] font-display text-[clamp(2.55rem,9.4vw,6.95rem)] uppercase leading-[0.88] tracking-[-0.01em] text-[#17130f] md:max-lg:text-[clamp(2.35rem,6.2vw,4.35rem)] max-md:max-w-none">
-            Shippin<span className="font-domaine">g</span><br />Interfa<span className="font-domaine">c</span>es, Systems, and Pr<span className="font-domaine">o</span>du<span className="font-domaine"  >c</span>t F<span className="font-domaine">o</span>undati<span className="font-domaine">o</span>ns.
+          <span className="mt-[0.54rem]  max-w-[7.18ch] font-display text-[clamp(2.55rem,9.4vw,6.95rem)] uppercase leading-[0.88] tracking-[-0.01em] text-[#17130f] md:max-lg:text-[clamp(2.35rem,6.2vw,4.35rem)] max-md:max-w-none">
+            <span className="hero-baseline-rule">Shippin<span className="font-domaine">g</span></span><br />
+            <span className="hero-baseline-rule">Interfa<span className="font-domaine">c</span>es</span>,  <br />
+            <span className="hero-baseline-rule">Systems, and </span> <br />
+            <span className="hero-baseline-rule">Pr<span className="font-domaine">o</span>du<span className="font-domaine"  >c</span>t</span> <br />
+            <span className="hero-baseline-rule">F<span className="font-domaine">o</span>undati<span className="font-domaine">o</span>ns.</span>
           </span>
-
-          <div className="mt-[0.68rem] flex items-center gap-[0.78rem]" aria-hidden="true">
-            <span className="h-px flex-1 bg-[rgba(42,33,23,0.48)]" />
-            <span className="text-[1.36rem] leading-none text-[#1f1913]">✦</span>
-            <span className="h-px flex-1 bg-[rgba(42,33,23,0.48)]" />
-          </div>
-
+          <Separator variant="normal" />
           <p className="mt-[0.66rem] max-w-[36.8ch] font-body text-[clamp(1rem,3.7vw,1.8rem)] leading-[1.24] tracking-[-0.004em] text-[#211b14] md:max-lg:text-[clamp(0.98rem,2.25vw,1.22rem)] max-md:max-w-none lg:max-w-[40ch]">
             Across four teams, from hardware discovery to AI tutoring and coding education.
           </p>
