@@ -11,7 +11,7 @@ export function PongPreview({
   actionLabel = "View Project"
 }) {
   return (
-    <div className="group relative w-[400px] h-[400px] outline outline-[#1d1b17]/60 outline-offset-4">
+    <div className="group relative mx-auto aspect-square w-full max-w-[22rem] outline outline-[#1d1b17]/60 outline-offset-4 sm:max-w-[25rem] md:max-w-[400px]">
       <img
         src={pongPreview}
         alt="Pong game preview"
@@ -35,8 +35,55 @@ export function PongPreview({
 export function Quote({ text }) {
   return (
     <figure className="m-0">
-      <blockquote className="font-body text-[1.1rem] italic leading-[1.25] text-[#261d15]">&ldquo;{text}&rdquo;</blockquote>
+      <blockquote className="font-body text-[clamp(1rem,3.8vw,1.1rem)] italic leading-[1.35] text-[#261d15]">&ldquo;{text}&rdquo;</blockquote>
     </figure>
+  );
+}
+
+export function ReviewCard({ quote, name, platform, href, avatarSrc }) {
+  return (
+    <article className="border border-solid border-[#1a1814]  bg-[#efe6d7]/20 p-[0.42rem] sm:p-[0.48rem]">
+      <div className="review-card-inner px-5 py-6 sm:px-4 sm:py-4">
+        <blockquote className="review-quote-lines m-0 max-w-[34ch] font-body text-[clamp(1.02rem,2.6vw,1.28rem)] leading-[1.38] tracking-[-0.008em] text-[#1a1814]">
+          &ldquo;{quote}&rdquo;
+        </blockquote>
+
+        <footer className="mt-7 flex items-center gap-3 sm:mt-8 sm:gap-3.5">
+          <span className="inline-flex h-10 w-10 shrink-0 overflow-hidden rounded-full border border-[#1a1814]/20 bg-[#ece4d8] sm:h-11 sm:w-11">
+            {avatarSrc ? (
+              <img
+                src={avatarSrc}
+                alt=""
+                aria-hidden="true"
+                className="h-full w-full object-cover grayscale contrast-[1.04]"
+                loading="lazy"
+              />
+            ) : (
+              <span className="flex h-full w-full items-center justify-center font-display text-[1rem] uppercase text-[#1a1814]">
+                {name.slice(0, 1)}
+              </span>
+            )}
+          </span>
+
+          <div className="min-w-0">
+            <p className="m-0 font-display text-[1rem] uppercase leading-none tracking-[0.03em] text-[#1a1814] sm:text-[1.2rem]">
+              {name}
+            </p>
+            <p className="mt-1.5 font-body text-[0.88rem] leading-none text-[#1a1814]/88 sm:text-[0.92rem]">
+              Reacted on{" "}
+              <a
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="underline decoration-[#1a1814] decoration-1 underline-offset-[0.18em] hover:text-[#1a1814]"
+              >
+                {platform}
+              </a>
+            </p>
+          </div>
+        </footer>
+      </div>
+    </article>
   );
 }
 
@@ -119,8 +166,8 @@ function SketchUnderline({ className = "", strokeWidth = 2.35 }) {
 
 function SketchTweetCard({ children }) {
   return (
-    <div className="relative mt-4 mr-4 ml-[-3px]">
-      <div className="relative isolate max-w-[20.5rem] overflow-hidden sm:max-w-[22rem]">
+    <div className="relative mt-6 max-md:mr-0 max-md:ml-0 md:mr-4 md:ml-[-3px]">
+      <div className="relative isolate w-full max-w-none overflow-hidden sm:max-w-[22rem]">
         <svg
           aria-hidden="true"
           viewBox="0 0 240 150"
@@ -148,36 +195,28 @@ function SketchTweetCard({ children }) {
 
 export function QuincyRecognitionStory() {
   return (
-    <div className="mt-4 border-t border-[#2c2217]/45 pt-2">
+    <div className="mt-6 border-t border-[#2c2217]/45 pt-3 max-md:mt-5 max-md:pt-4">
         <div className="w-full">
           <HanddrawnLabel text="Recognized by" />
-          <div className="mt-2 flex items-start justify-between gap-3 md:flex-col md:items-start lg:flex-row lg:items-start xl:flex-row">
-            <div className="min-w-0">
-              <p className="font-domaine text-[clamp(1.6rem,7vw,3.05rem)] uppercase leading-[0.9] tracking-[-0.03em] text-[#16100c] md:text-[clamp(1.85rem,3vw,2.6rem)] xl:text-[clamp(1.8rem,2.7vw,3.05rem)]">
+          <div className="mt-3 min-w-0">
+              <p className="font-domaine text-[clamp(1.45rem,6.2vw,2.35rem)] uppercase leading-[0.95] tracking-[-0.03em] text-[#16100c] md:text-[clamp(1.85rem,3vw,2.6rem)] xl:text-[clamp(1.8rem,2.7vw,3.05rem)]">
                 Quincy Larson
               </p>
-              <p className="mt-[1px] font-domaine text-[clamp(0.84rem,3.5vw,1.35rem)] italic leading-[0.98] text-[#1d1510] md:text-[clamp(0.82rem,1.35vw,1.05rem)] xl:text-[clamp(0.8rem,1.22vw,1.35rem)]">
+              <p className="mt-1 font-domaine text-[clamp(0.9rem,3.2vw,1.1rem)] italic leading-[1.15] text-[#1d1510] md:text-[clamp(0.82rem,1.35vw,1.05rem)] xl:text-[clamp(0.8rem,1.22vw,1.35rem)]">
                 (Founder, freeCodeCamp)
               </p>
-            </div>
-           
           </div>
-          <div className="relative justify-self-start md:justify-self-center">
-        </div>
         </div>
 
-       
-
-      <div className="mt-3 max-w-[42rem]">
-        <p className="flex flex-wrap items-center gap-x-3 gap-y-2 font-body text-[clamp(0.96rem,3.5vw,1.16rem)] leading-[1.15] text-[#1c150f] md:text-[clamp(0.94rem,1.3vw,1.06rem)] xl:text-[clamp(0.96rem,1.2vw,1.16rem)]">
-          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#17110c] text-[#f5ecdd]">
+      <div className="mt-5 max-w-[42rem] max-md:mt-4">
+        <p className="flex flex-wrap items-center gap-x-2.5 gap-y-2 font-body text-[clamp(0.94rem,3.4vw,1.05rem)] leading-[1.35] text-[#1c150f] md:text-[clamp(0.94rem,1.3vw,1.06rem)] xl:text-[clamp(0.96rem,1.2vw,1.16rem)]">
+          <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#17110c] text-[#f5ecdd]">
             <TweetIcon className="h-3.5 w-3.5" />
           </span>
-          <span className="text-balance mt-2">
+          <span className="text-balance">
             Quincy Larson{" "}
             <span className="relative inline-flex flex-col">
               <span className="relative z-[1]">noticed</span>
-              <SketchUnderline className="-mt-1 h-3 w-full min-w-[1.8rem]" />
             </span> the project on Twitter.
           </span>
         </p>
@@ -202,13 +241,13 @@ export function QuincyRecognitionStory() {
           </div>
 
           <div className="pl-1 sm:pl-1.5">
-            <p className="mb-2 mt-2 ml-6 font-domaine text-[1.4rem] italic leading-[0.98] tracking-[-0.0] text-[#16100b] ">
+            <p className="mb-2 mt-2 ml-0 max-md:ml-2 font-domaine text-[clamp(1.05rem,4.6vw,1.4rem)] italic leading-[1.2] tracking-[-0.01em] text-[#16100b] sm:ml-6">
               &ldquo;Awesome, can you link to the pen?&rdquo;
             </p>
           </div>
         </SketchTweetCard>
 
-        <div className="mt-6 max-w-[33rem] font-body text-[clamp(1rem,3.8vw,1.08rem)] leading-[1.18] text-[#201710] md:text-[clamp(0.96rem,1.1vw,1rem)] xl:text-[clamp(1.2rem,1.04vw,1rem)]">
+        <div className="mt-5 max-w-[33rem] font-body text-[clamp(1.1rem,3.5vw,1.02rem)] leading-[1.42] text-[#201710] max-md:mt-6">
           <span>That reply led to a </span>
           <span className="relative inline-flex items-center justify-center px-3 py-0.5 font-domaine text-[1.05em] uppercase leading-none text-[#1a120d]">
             DM
@@ -225,7 +264,6 @@ export function QuincyRecognitionStory() {
           <span className="font-display text-[1.06rem] leading-none text-[#1b140d]">&rarr;</span>{" "}
           <span className="relative inline-flex flex-col align-middle">
             <span className="relative z-[1]">eventually</span>
-            <SketchUnderline className="-mt-1 h-3 w-full min-w-[5.2rem]" />
           </span>{" "}
           <span className="font-display text-[1.06rem] leading-none text-[#1b140d]">&rarr;</span>{" "}
           <span className="relative inline-flex max-w-none flex-col text-balance align-middle">

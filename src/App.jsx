@@ -73,7 +73,7 @@ export default function App() {
         />
       )}
       <div
-        className={`vintage-paper relative min-h-screen text-ink font-body selection:bg-accent selection:text-paper antialiased ${
+        className={`vintage-paper relative min-h-screen text-dark font-body selection:bg-accent selection:text-paper antialiased ${
           introActive ? "z-[9999] overflow-hidden" : ""
         }`}
       >

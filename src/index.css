@@ -88,7 +88,7 @@
 
 :root {
   --paper-bg: #DFD5CA;
-  --fs-headline: clamp(3.2rem, 7vw, 40rem);
+  --fs-headline: clamp(2.2rem, 7vw, 40rem);
   --fs-hero-line: clamp(1.8rem, 7vw, 50rem);
 }
 
@@ -125,9 +125,60 @@ body {
   scroll-behavior: smooth;
 }
 
+.newspaper-gutter {
+  width: 54px;
+}
+
+.newspaper-gutter::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 24px;
+  width: 21px;
+  background-color: rgba(223, 213, 202, 0.08);
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(31, 31, 27, 0.42) 0,
+      rgba(31, 31, 27, 0.42) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(31, 31, 27, 0.34) 0,
+      rgba(31, 31, 27, 0.34) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  background-blend-mode: multiply;
+  box-shadow:
+    inset 1px 0 rgba(255, 250, 237, 0.28),
+    inset -1px 0 rgba(23, 19, 15, 0.08);
+  mix-blend-mode: multiply;
+  opacity: 0.78;
+}
+
 .vintage-paper-panel {
   position: relative;
   isolation: isolate;
+}
+
+.paper-knockout-panel {
+  isolation: isolate;
+  background-color: #1D1D1B;
+  color: #fff;
+  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+  -webkit-mask-clip: padding-box, text;
+  -webkit-mask-composite: xor;
+  -webkit-mask-size: 100% 100%, 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0); 
+  mask-clip: padding-box, text; 
+  mask-composite: exclude;
+  mask-size: 100% 100%, 100% 100%;
+  mask-repeat: no-repeat;
 }
 
 .ink-poster {
@@ -149,6 +200,19 @@ body {
     inset 0 0 18px rgba(255, 250, 236, 0.05);
 }
 
+.review-card-inner {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%231a1814' stroke-opacity='0.45' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='21' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.review-quote-lines {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  text-decoration-skip-ink: none;
+}
+
 @layer utilities {
   .text-headline {
     font-size: var(--fs-headline);
@@ -156,6 +220,25 @@ body {
 
   .text-hero-line {
     font-size: var(--fs-hero-line);
+  }
+
+  /* Rule sits in the gap below each line's glyphs (not at the block edge). */
+  .hero-baseline-rule {
+    position: relative;
+    --hero-rule-gap: 1px;
+    padding-bottom: var(--hero-rule-gap);
+  }
+
+  .hero-baseline-rule::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--hero-rule-gap) / 2 + 45px);
+    height: 1px;
+    background-color: #0505055c;
+    opacity: 0.5;
+    pointer-events: none;
   }
 }
 
@@ -193,6 +276,69 @@ body {
   font-weight: 900;
   border-radius: 1px;
   padding: 0.12rem 0.32rem 0.62rem 0.28rem;
+}
+
+.flash-news-badge {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-shrink: 0;
+  padding: 0.95rem 2.35rem 0.95rem 1rem;
+  color: #fff;
+  background-color: #121212;
+
+  background-blend-mode: screen, screen, multiply;
+  background-size: auto, auto, 180px auto;
+  clip-path: polygon(0 0, calc(100% - 1.15rem) 0, 100% 100%, 0 100%);
+}
+
+.flash-news-badge__label {
+  font-size: clamp(1.45rem, 2.8vw, 2.35rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transform: skewX(-10deg);
+}
+
+.footer-pattern-band {
+  display: block;
+  width: 100%;
+  height: 44px;
+  color: rgba(239, 232, 216, 0.24);
+  background-color: #17130f;
+  border-top: 1px solid rgba(23, 19, 15, 0.5);
+}
+
+.pixel-pattern-rule {
+  position: relative;
+  height: var(--rule-height, 10px);
+  color: rgba(23, 19, 15, 0.42);
+  line-height: 0;
+}
+
+.pixel-pattern-rule svg {
+  display: block;
+  height: var(--rule-height, 10px);
+}
+
+.pixel-pattern-rule__label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 0 1.45rem;
+  color: rgba(23, 19, 15, 0.44);
+  background-color: var(--paper-bg);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 
 @keyframes marqueeScroll {

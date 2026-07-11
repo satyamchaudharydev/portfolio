@@ -4,9 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: "#1D1D1B",
         paper: "#C3BAB1",
         paperDark: "#dbcfb4",
-        ink: "#17130f",
+        ink: "#1D1D1B",
         inkSoft: "#756F69",
         accent: "#c0172d",
         accentDark: "#9f1023"
